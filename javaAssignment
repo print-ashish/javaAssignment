@@ -1,0 +1,77 @@
+package com.ashish;
+
+import java.util.Scanner;
+
+public class Square {
+    private int side;
+    Square(int s)
+    {
+        side =s;
+
+    }
+
+    int area()
+    {
+        System.out.println("area = "+ side*side);
+        return side*side;
+    }
+    void draw(){
+        for (int i = 0; i < side; i++) {
+            for (int j = 0; j < side; j++) {
+                if (i==0 || i==(side-1))
+                {
+                    System.out.print("*");
+                }
+                else if (j==0 || j==(side-1)){
+                    System.out.print("*");
+                }
+                else
+                    System.out.print(" ");
+
+
+            }
+            System.out.println();
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+//        1st
+//        int s ;
+//        System.out.println("Enter side of square");
+//        s = in.nextInt();
+//        Square s1 = new Square(s);
+//        s1.area();
+
+        //2nd
+        int totalar = 0;
+        for (int i = 0; i < 10; i++) {
+            int s;
+            double rd = Math.random();
+            s = (int) (rd * 10);
+            System.out.println("side = "+s);
+            Square s1 = new Square(s);
+            totalar = totalar + s1.area();
+            s1.draw();
+        }
+
+            System.out.println("total area = " + totalar);
+
+
+            //3rd
+//        int s ;
+//        System.out.println("Enter side of square");
+//        s = in.nextInt();
+//        Square s1 = new Square(s);
+//        s1.draw();
+
+
+
+        }
+
+
+    }
+
+
